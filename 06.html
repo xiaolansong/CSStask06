@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS照片墙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,body {
+            background: #eee;
+        }
+
+        .wall {
+            width: 100%;
+            height: 700px;
+            position: fixed;
+            top: 40%;
+            margin-top: -250px;
+            margin-left: 0px;
+            background: url(back.png) no-repeat;
+        }
+
+        div[class *="img"]{
+            position: absolute;
+            display: block;
+            max-width: 150px;
+            max-height: 150px;
+            padding: 10px 10px 20px;
+            background: #fff;
+            border: 1px solid #ddd;
+            transition: 0.2s;
+            text-align: center;
+        }
+
+        div[class *="img"]:hover {
+            transform: scale(1.5) rotateZ(0);
+            box-shadow: 10px 10px 5px #555;
+            z-index: 2;
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .img1 {
+            left: 20px;
+            top: 120px;
+            transform: rotateZ(20deg);
+        }
+
+        .img2 {
+            left: 220px;
+            top: 120px;
+            transform: rotateZ(5deg);
+        }
+
+        .img3 {
+            left: 420px;
+            top: 120px;
+            transform: rotateZ(-10deg);
+        }
+
+        .img4 {
+            left: 630px;
+            top: 120px;
+            transform: rotateZ(25deg);
+        }
+
+        .img5 {
+            left: 830px;
+            top: 120px;
+            transform: rotateZ(-2deg);
+        }
+
+        .img6 {
+            left: 1050px;
+            top: 120px;
+            transform: rotateZ(-15deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wall">
+        <div class="img1">
+            <img src="11.jpg" alt="相识" />
+            <span>相识</span>
+        </div>
+        <div class="img2">
+            <img src="22.jpg" alt="凝视" />
+            <span>凝视</span>
+        </div>
+        <div class="img3">
+            <img src="33.jpg" alt="甜睡" />
+            <span>甜睡</span>
+        </div>
+        <div class="img4">
+            <img src="44.jpg" alt="逗乐" />
+            <span>逗乐</span>
+        </div>
+        <div class="img5">
+            <img src="55.jpg" alt="奔跑" />
+            <span>奔跑</span>
+        </div>
+        <div class="img6">
+            <img src="66.jpg" alt="漠视" />
+            <span>漠视</span>
+        </div>
+    </div>
+</body>
+
+</html>
